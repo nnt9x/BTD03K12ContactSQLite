@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/edtDialogContactName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="Name:"/>
+
+    <EditText
+        android:id="@+id/edtDialogContactAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/edtDialogContactName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="Address:"/>
+
+    <EditText
+        android:id="@+id/edtDialogContactPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/edtDialogContactAddress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="Phone:"/>
+
+    <Button
+        android:id="@+id/btnDialogSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtDialogContactPhone"
+        android:text="Save"
+        android:backgroundTint="@android:color/holo_green_dark" />
+
+    <Button
+        android:id="@+id/btnDialogCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtDialogContactPhone"
+        android:text="Cancel"
+        android:backgroundTint="@android:color/holo_red_dark" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
